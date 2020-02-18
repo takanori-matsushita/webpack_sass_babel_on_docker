@@ -7,6 +7,6 @@ services:
       - ./markup/assets:/webpack_practice/markup/assets
       - ./docker/package.json:/webpack_practice/package.json
       - ./docker/webpack.config.js:/webpack_practice/webpack.config.js
-    command: yarn watch
+    command: npm run watch
     ports:
       - 2000:2000
