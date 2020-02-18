@@ -1,0 +1,16 @@
+.footer {
+  margin: auto;
+  padding: 20px 0;
+  background-color: $yellow;
+  .copyright {
+    max-width: 1000px;
+    &__text {
+      color: $white;
+      text-align: center;
+      &--white {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

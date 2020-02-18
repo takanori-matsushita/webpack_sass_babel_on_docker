@@ -1,0 +1,39 @@
+//小デバイス（横向きモバイル,576px以上）
+// @mixin sm {
+// 	@media screen and (max-width: 575.98px) {
+// 		@content;
+// 	}
+// }
+
+//中デバイス（タブレット,768px以上）
+@mixin sp {
+	@media screen and (max-width: 767.98px) {
+		@content;
+	}
+}
+
+//大デバイス（デスクトップ,992px以上）
+@mixin pc {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+//特大デバイス（ワイドデスクトップ,1200px以上）
+// @mixin xl {
+// 	@media (min-width: 992px) and (max-width: 1199.98px) {
+// 		@content;
+// 	}
+// }
+
+%balloon {
+  content: '';
+  position: absolute;
+  background-color: #F4BB19;
+  border-radius: 5px;
+}
+
+%section-element {
+  max-width: 1000px;
+  margin: auto;
+}

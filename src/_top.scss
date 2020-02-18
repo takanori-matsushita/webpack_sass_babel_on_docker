@@ -1,0 +1,387 @@
+#about {
+  padding: $section-padding;
+  .about {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+    &__title {
+      color: $yellow;
+      font-size: $section-title;
+      margin-bottom: 50px;
+      &--small {
+        font-size: 2.25rem;
+        line-height: $section-title;
+      }
+    }
+    &__article {
+      font-size: 1.375rem;
+      color: $grey;
+      line-height: 2.5rem;
+      margin-bottom: 50px;
+    }
+    .objective {
+      display: flex;
+      @include sp {
+        display: block;
+      }
+      &__content {
+        width: $col3;
+        margin: 30px;
+        @include sp {
+          width: $col2;
+          margin: auto;
+        }
+        .phrase {
+          position: relative;
+          color: $white;
+          background-color: $yellow;
+          margin-bottom: 50px;
+          padding: 20px 0;
+          border-radius: 10px;
+          line-height: 1.875rem;
+          &:before {
+            @extend %balloon;
+            left: 20px;
+            bottom: -30px;
+            width: 18px;
+            height: 18px;
+            
+          }
+          &:after {
+            @extend %balloon;
+            left: 40px;
+            bottom: -50px;
+            width: 13px;
+            height: 13px;
+            
+          }
+        }
+        .image-wrap {
+          padding: 30px 0;
+          vertical-align: middle;
+          &__image {
+            height: 100%;
+          }
+        }
+      }
+    }
+    &__description {
+      line-height: 2rem;
+    }
+  }
+}
+#use {
+  background-color: $yellow;
+  padding: $section-padding;
+  .use {
+    @extend %section-element;
+    &__title {
+      font-size: $section-title;
+      color: $white;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    &__contents {
+      margin: auto;
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background-color: $white;
+        border-radius: 10px;
+        margin: 50px 0;
+        min-height: 350px;
+        @include sp {
+          display: block;
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+        &__number {
+          position: absolute;
+          top: 0;
+          background-color: $skyblue;
+          width: 80px;
+          height: 80px;
+          .position {
+            position: absolute;
+            top: 40%;
+            font-size: 2rem;
+            color: $white;
+            &--left {
+              left: 40%;
+              transform: translate(-40%, -40%);
+            }
+            &--right {
+              @include pc {
+                right: 40%;
+                transform: translate(40%, -40%);
+              }
+              @include sp {
+                left: 40%;
+                transform: translate(-40%, -40%);
+              }
+            }
+          }
+          &--left {
+            left: 0;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 100%;
+          }
+          &--right {
+            @include pc {
+              right: 0;
+              border-top-right-radius: 10px;
+              border-bottom-left-radius: 100%;
+            }
+            @include sp {
+              left: 0;
+              border-top-left-radius: 10px;
+              border-bottom-right-radius: 100%;
+            }
+          }
+        }
+        &--order {
+          flex-direction: row-reverse;
+        }
+        &__description {
+          @include sp {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-top: 100px;
+            margin-bottom: 20px;
+          }
+          &--left {
+            margin-left: 50px;
+            @include sp {
+              margin-right: 50px;
+            }
+          }
+          &--right {
+            margin-right: 50px;
+            @include sp {
+              margin-left: 50px;
+            }
+          }
+          .title {
+            color: $yellow;
+            font-size: 2.5rem;
+            vertical-align: middle;
+            &--label {
+              display: inline-block;
+              color: $white;
+              font-size: 1rem;
+              background-color: $yellow;
+              border-radius: 4px;
+              margin-left: 10px;
+              padding: 0 20px;
+              line-height: 2.5rem;
+              vertical-align: middle;
+            }
+          }
+          .lists {
+            margin-top: 50px;
+            margin-left: 20px;
+            @include sp {
+              margin-top: 0;
+            }
+            &__list {
+              list-style-type: none;
+              margin: 20px 0;
+              color: $grey;
+              &:before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                border-radius: 100%;
+                background-color: $yellow;
+                position: relative;
+                left: -15px;
+                top: -3px;
+              }
+              &--bold {
+                color: $black;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        &__image {
+          @include sp {
+            text-align: center;
+            padding: 0 50px;
+          }
+          .image {
+            max-width: 100%;
+            @include sp {
+              margin-bottom: 50px;
+            }
+            &__pc-none {
+              @include pc {
+                display: none;
+              }
+            }
+            &__sp-none {
+              @include sp {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#recommend {
+  padding: $section-padding;
+  .recommend {
+    @extend %section-element;;
+    &__title {
+      font-size: $section-title;
+      color: $yellow;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    .contents {
+      display: flex;
+      @include sp {
+        display: block;
+      }
+      .content {
+        width: 25%;
+        padding: 0 20px;
+        @include sp {
+          display: flex;
+          width: 100%;
+          padding: 0 50px;
+        }
+        .img-wrap {
+          text-align: center;
+          margin-bottom: 30px;
+          &__image {
+            
+          }
+        }
+        .description {
+          @include sp {
+            padding: {
+              left: 50px;
+              bottom: 50px;
+            }
+          }
+          &__title {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 20px;
+            @include sp {
+              font-size: 2.25rem;
+              text-align: left;
+
+            }
+          }
+          &__sentence {
+            color: $grey;
+            @include sp {
+              font-size: 1.75rem;
+              line-height: 48px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#function {
+  padding: $section-padding;
+  background-color: $yellow;
+  .function {
+    @extend %section-element;;
+    &__title {
+      font-size: $section-title;
+      color: $white;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      .content {
+        width: 25%;
+        padding: 0 20px;
+        @include sp {
+          width: 50%;
+        }
+        .img-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $white;
+          height: 160px;
+          border-radius: 10px;
+          &__image {
+            max-width: 100%;
+          }
+        }
+        &__title {
+          text-align: center;
+          color: $white;
+          font-size: 1.375rem;
+          margin-top: 20px;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+#begin {
+  padding: $section-padding;
+  .begin {
+    @extend %section-element;
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+      display: block;
+    }
+    &-text {
+      @include sp {
+        text-align: center;
+        padding: 0 20px;
+        margin-bottom: 50px;
+      }
+      &__title {
+        color: $yellow;
+        font-size: $section-title;
+        margin-bottom: 30px;
+      }
+      &__description {
+        font-size: 1.375rem;
+        line-height: 2.25rem;
+        letter-spacing: 1.5px;
+        color: $grey;
+        margin-bottom: 30px;
+      }
+      &__download {
+        display: inline-block;
+        color: $white;
+        background-color: $skyblue;
+        text-decoration: none;
+        padding: 20px 100px;
+        border-radius: 50px;
+      }
+    }
+    .img-wrap {
+      @include sp {
+        text-align: center;
+      }
+      &__image {
+        max-width: 100%;
+      }
+    }
+  }
+}
